@@ -113,6 +113,9 @@ app.get('/bet', async (req, res) => {
     })
 })
 
+app.get('/', (req, res) => {
+    res.send("welcome!")
+})
 
 
 app.listen(port, () => {
