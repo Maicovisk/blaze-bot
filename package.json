@@ -1,0 +1,14 @@
+{
+  "name": "app.js.package",
+  "version": "1.0.0",
+  "description": "teste version",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blaze"
+  ],
+  "author": "maicon santos dos santos",
+  "license": "MIT"
+}
