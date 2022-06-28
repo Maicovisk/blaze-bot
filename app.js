@@ -76,7 +76,7 @@ function dropTable() {
 
 
 const app = express()
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 80;
 
 
 app.get('/pattern', (req, res) => {
