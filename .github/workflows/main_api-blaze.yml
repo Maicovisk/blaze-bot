@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'api-blaze'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B91E6C05494C417C85A9D4E5E3CCA215 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_189F304112DD4E48A2F0FD513599E66F }}
           package: .
