@@ -4,8 +4,8 @@ const app = express()
 const port = process.env.PORT || 80;
 
 
-app.get('/', async (req, res) => {
-    res.json(result)
+app.get('/', (req, res) => {
+    res.send('ola bom dia')
 })
 
 
