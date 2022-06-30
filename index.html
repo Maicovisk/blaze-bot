@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>blaze</title>
+</head>
+<body>
+    <main id="app">
+        <header>
+            <div class="p1">
+                <h1>Blaze Bot</h1>
+            </div>
+            <div class="p2">
+                <ul>
+                    <li>Green: {{ dados.all_green }}</li>
+                    <li>Loss: {{ dados.all_loss }}</li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="notify">
+            <template>    
+                <div class="notf green">
+                    green!!!
+                </div>
+
+                
+                <div class="notf red" >
+                    red!
+                </div>
+            </template>
+        </div>
+
+
+        <div class="appdata">
+            <div class="hs">
+                <div class="coloris">
+                    <template v-for="c in dados.now_pattern">
+                        <div class="redCase Case" v-if='c.color == 1'>
+                            {{c['roll']}}
+                        </div>
+                        <div class="blackCase Case" v-else-if='c.color == 2'>
+                            {{c['roll']}}
+                        </div>
+
+                        <div class="whiteCase Case" v-else>
+                            {{c['roll']}}
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="gale" v-if='dados.gale > -1'>
+                    <div class="mesagegale" v-if="dados.gale >= 1">
+                        Start martingale {{ dados.gale }}
+                    </div>
+                </div>
+                <div class="bets" v-if='dados["now_pattern"] && dados["bet"].length > 0'>
+                    Após o {{ dados.now_pattern[0]['roll'] }} 
+                    entrar 
+                    {{ dados['bet'][dados['bet'].length - 1]['wnext'] }}
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>

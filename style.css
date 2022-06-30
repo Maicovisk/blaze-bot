@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+header {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Diplomata SC', cursive !important;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 20px;
+    min-height: 100px;
+}
+
+
+header .p1 {
+    height: 50%;
+}
+
+header .p2 {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(128, 128, 128, 0.397);
+    width: 100%;
+    height: 50%;
+    font-size: 15px;
+    padding: 0px 5px;
+    justify-content: center;
+}
+header ul {
+    list-style: none;
+    text-transform: capitalize;
+    align-self: flex-start;
+}
+
+.appdata {
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+}
+
+
+.coloris {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Case {
+    width: 50px;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: white;
+}
+
+
+.Case::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid white;
+    position: absolute;
+}
+
+
+.whiteCase::before {
+    border: 2px solid black !important;
+}
+
+.redCase {
+    background-color: red;
+    color: white;
+}
+
+.blackCase {
+    background-color: black;
+    color: white;
+}
+
+.bets {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+}
+
+.notify {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    height: 0px;
+    overflow: visible;
+    border-bottom: 1px solid wheat;
+    flex-direction: column;
+    opacity: .8;
+    display: none;
+}
+
+.hst {
+    width: 250px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.notf {
+    background-color: rgb(103, 233, 103);
+    max-width: 250px;
+    border-radius: 3px;
+    position: relative;
+    width: 100%;
+    min-height: 35px;
+    color: green;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;;
+    text-transform: capitalize;
+    animation: notf 600ms linear;
+    z-index: 10;
+}
+
+@keyframes notf {
+    from {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+}
+
+
+
+.red {
+    background-color: #dd2b3d;
+    color: white;
+    font-weight: 400;
+}
+
+.gale {
+    display: flex;
+    justify-content: center;
+
+}
+
+.mesagegale {
+    color: yellow;
+    font-size: 20px;
+    margin: 10px 0px;
+    animation: warn 1s linear alternate;
+}
+
+
+@keyframes warn {
+    from {
+        text-shadow: 2px 3px 13px;
+    }
+}
